@@ -10,16 +10,7 @@ func _on_process(delta: float) -> void:
 	pass
 
 func _on_physics_process(delta: float) -> void:
-	if Input.is_action_pressed("move_left"):
-		direction =Vector2.LEFT
-	elif Input.is_action_pressed("move_right"):
-		direction =Vector2.RIGHT
-	elif Input.is_action_pressed("move_up"):
-		direction =Vector2.UP
-	elif Input.is_action_pressed("move_down"):
-		direction =Vector2.DOWN
-	else:
-		direction = Vector2.ZERO
+	direction = GameInputEvents.movement_input()
 	
 	if direction == Vector2.LEFT:
 		animated_sprite_2d.play("idle_left")
