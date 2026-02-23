@@ -413,5 +413,7 @@ script = ExtResource("4_mtc51")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
-[node name="Walk" type="Node" parent="StateMachine" unique_id=473024102]
+[node name="Walk" type="Node" parent="StateMachine" unique_id=473024102 node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("5_mtc51")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
