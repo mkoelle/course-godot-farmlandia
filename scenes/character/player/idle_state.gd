@@ -32,6 +32,9 @@ func _on_next_transition() -> void:
 	if(player.current_tool == Data_Types.Tools.Hoe && GameInputEvents.use_tool()):
 		transition.emit("till")
 
+	if(player.current_tool == Data_Types.Tools.Water && GameInputEvents.use_tool()):
+		transition.emit("water")
+
 func _on_enter() -> void:
 	pass
 
