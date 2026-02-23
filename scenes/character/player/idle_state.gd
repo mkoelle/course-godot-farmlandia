@@ -25,6 +25,12 @@ func _on_next_transition() -> void:
 	GameInputEvents.movement_input()
 	if(GameInputEvents.is_movement_input()):
 		transition.emit("walk")
+	
+	if(player.current_tool == Data_Types.Tools.Axe && GameInputEvents.use_tool()):
+		transition.emit("chop")
+
+	if(player.current_tool == Data_Types.Tools.Hoe && GameInputEvents.use_tool()):
+		transition.emit("till")
 
 func _on_enter() -> void:
 	pass
