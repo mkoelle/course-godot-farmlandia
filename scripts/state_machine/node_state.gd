@@ -5,10 +5,10 @@ extends Node
 signal transition
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _on_process(delta: float) -> void:
+func _on_process(_delta: float) -> void:
 	pass
 
-func _on_physics_process(delta: float) -> void:
+func _on_physics_process(_delta: float) -> void:
 	pass
 
 func _on_next_transition() -> void:
