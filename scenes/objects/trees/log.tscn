@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dyoril7esdcxm"]
+
+[ext_resource type="Texture2D" uid="uid://l64gk5aqvuh4" path="res://assets/objects/plants/basic_grass_biom_things.png" id="1_e2a05"]
+[ext_resource type="PackedScene" uid="uid://bi7sbquabcdwc" path="res://scenes/components/collectable_component.tscn" id="2_s5rqd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm6ke"]
+atlas = ExtResource("1_e2a05")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_588pv"]
+radius = 4.0
+height = 16.0
+
+[node name="Log" type="Node2D" unique_id=839309891]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=434893697]
+texture = SubResource("AtlasTexture_xm6ke")
+
+[node name="CollectableComponent" parent="." unique_id=1620113253 instance=ExtResource("2_s5rqd")]
+collectable_name = "LoggyLog"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent" unique_id=33761291]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_588pv")
