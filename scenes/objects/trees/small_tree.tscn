@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dyk25h7kuh5b5"]
+
+[ext_resource type="Texture2D" uid="uid://l64gk5aqvuh4" path="res://assets/objects/plants/basic_grass_biom_things.png" id="1_a8qts"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyb6m"]
+atlas = ExtResource("1_a8qts")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au4vd"]
+radius = 3.0
+height = 10.0
+
+[node name="SmallTree" type="Sprite2D" unique_id=1311363029]
+position = Vector2(0, -11)
+texture = SubResource("AtlasTexture_xyb6m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1558286573]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=590877291]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_au4vd")
