@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://0vg5ed7fqxbe" path="res://scenes/character/player/chop.gd" id="7_1ym00"]
 [ext_resource type="Script" uid="uid://bvjvutm3h5ehs" path="res://scenes/character/player/till.gd" id="8_y16fa"]
 [ext_resource type="Script" uid="uid://brvm5oh7ftmqc" path="res://scenes/character/player/water.gd" id="9_ivmu3"]
+[ext_resource type="PackedScene" uid="uid://b31wgv625y7ga" path="res://scenes/components/hit_component.tscn" id="10_3ka3x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ka3x"]
 atlas = ExtResource("1_b1u1l")
@@ -396,6 +397,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b1u1l"]
 size = Vector2(10, 14)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fgepw"]
+radius = 3.1622777
+
 [node name="Player" type="CharacterBody2D" unique_id=1025868063]
 collision_layer = 2
 script = ExtResource("1_2prsm")
@@ -439,3 +443,9 @@ animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 script = ExtResource("9_ivmu3")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="HitComponent" parent="." unique_id=1134898194 instance=ExtResource("10_3ka3x")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitComponent" unique_id=819559278]
+shape = SubResource("CircleShape2D_fgepw")
+debug_color = Color(0.95097584, 0.13790837, 0.44538295, 0.41960785)
