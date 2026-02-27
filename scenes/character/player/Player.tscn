@@ -397,6 +397,7 @@ animations = [{
 size = Vector2(10, 14)
 
 [node name="Player" type="CharacterBody2D" unique_id=1025868063]
+collision_layer = 2
 script = ExtResource("1_2prsm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1252241633]
@@ -422,6 +423,7 @@ animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 script = ExtResource("5_mtc51")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+speed = 75
 
 [node name="Chop" type="Node" parent="StateMachine" unique_id=1689958314 node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("7_1ym00")

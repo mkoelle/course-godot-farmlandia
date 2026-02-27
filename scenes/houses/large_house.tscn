@@ -13,3 +13,7 @@ tile_set = ExtResource("1_xgc15")
 [node name="Furniture" type="TileMapLayer" parent="." unique_id=1787279017]
 tile_map_data = PackedByteArray("AAABAPf/BgAAAAAAAAAGAPf/BgACAAAAAAADAPf/BgABAAAAAAAJAPj/BgADAAAAAAAAAPj/BgADAAAAAAAHAPr/BgADAAMAAAAGAPr/BgAEAAIAAAAHAPn/BgAGAAIAAAAHAPv/BgAHAAIAAAAIAPr/BgAFAAIAAAAIAPf/BgAHAAMAAAACAPj/BgAAAAEAAAAAAPv/BgABAAMAAAACAPv/BgABAAMAAAADAP3/BgADAAUAADAGAP3/BgAFAAUAAAABAPv/BgAHAAUAAGAFAPj/BgAEAAEAAAA=")
 tile_set = ExtResource("1_xgc15")
+
+[node name="Interactive" type="TileMapLayer" parent="." unique_id=1054195921]
+tile_map_data = PackedByteArray("AAADAP7/AAAAAAAAAQA=")
+tile_set = ExtResource("1_xgc15")
