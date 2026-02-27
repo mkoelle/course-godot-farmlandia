@@ -12,3 +12,4 @@ func on_damage(hit_damage: int) -> void:
 
 func fall() -> void:
 	print("Opps I fell over")
+	queue_free()
