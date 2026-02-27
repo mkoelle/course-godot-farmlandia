@@ -6,4 +6,6 @@ extends Area2D
 signal on_damage
 
 func _on_area_entered(area: Area2D) -> void:
-	on_damage.emit()
+	var hit_component = area as Hit_Component
+	if tool == hit_component.current_tool:
+		on_damage.emit(hit_component.damage)
