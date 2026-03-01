@@ -1,7 +1,7 @@
 extends Sprite2D
 
-@onready var health_component: HealthComponent = $HealthComponent
-@onready var damage_component: Damage_Component = $DamageComponent
+@onready var damage_component: Damage_Component = $"../DamageComponent"
+@onready var health_component: HealthComponent = $"../HealthComponent"
 
 var log_scene = preload("res://scenes/objects/trees/log.tscn")
 
@@ -22,5 +22,5 @@ func fall() -> void:
 
 func add_log()-> void:
 	var loggy = log_scene.instantiate() as Node2D
-	loggy.global_position = global_position
-	get_parent().add_child(loggy)
+	loggy.global_position = get_parent().global_position
+	get_parent().get_parent().add_child(loggy)
