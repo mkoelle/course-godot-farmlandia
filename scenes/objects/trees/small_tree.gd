@@ -11,6 +11,7 @@ func _ready():
 
 func on_damage(hit_damage: int) -> void:
 	health_component.apply_damage(hit_damage)
+	material.set_meta("shake_intensity",1.0)
 
 func fall() -> void:
 	call_deferred("add_log")
